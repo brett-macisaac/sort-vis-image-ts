@@ -1,0 +1,232 @@
+
+.conSliderStd
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    /* width: 50px; */
+    /* height: 100%; */
+    /* max-width: 300px; */
+    /* border-radius: 5px; */
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+
+.sliderStd
+{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    cursor: pointer;
+    z-index: 3;
+    background-color: transparent;
+}
+
+.sliderStdV
+{
+    /* IE */
+    writing-mode: bt-lr;
+
+    /* FireFox */
+    appearance: slider-vertical;
+
+    /* Webkit (Chrome, Safari, Opera) */
+    -webkit-appearance: slider-vertical;
+
+    /* This shouldn't be necessary, but atm it's required to remove the slider's track. */
+    opacity: 0;
+}
+
+
+.sliderStd::-webkit-slider-thumb
+{
+    display: hidden;
+    -webkit-appearance: none;
+    width: 0;
+    z-index: 2;
+    position: relative;
+
+    /* This shouldn't be necessary, but atm it's required to remove the slider's track. */
+    background-color: transparent;
+    /* opacity: 0; This also works */
+}
+
+.sliderStd::-moz-range-thumb
+{
+    border: none;
+    background-color: transparent;
+    z-index: 3;
+}
+
+.sliderStdProgress
+{
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+
+    flex-direction: row;
+    justify-content: flex-end;
+
+    z-index: 5;
+}
+
+.sliderStdProgressVtTopDown
+{
+    align-items: flex-end;
+    top: 0; 
+    /* border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; */
+}
+
+.sliderStdProgressVtBottomUp
+{
+    align-items: flex-start;
+    bottom: 0; 
+    /* border-top-left-radius: 5px;
+    border-top-right-radius: 5px; */
+}
+
+.sliderStdProgressH
+{
+    top: 0; 
+    /* border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px; */
+}
+
+.sliderStdBackground
+{
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    /* top: 0;  */
+    /* left: 0; */
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
+
+    pointer-events: none;
+
+    z-index: 4;
+}
+
+.label
+{
+    position: absolute;
+    justify-content: center;
+    z-index: 6;
+    pointer-events: none;
+}
+
+.lblV
+{
+    left: 0;
+    width: 100%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+.lblH
+{
+    top: 0;
+    height: 100%;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.lblLabelVtTopDown
+{
+    top: 0;
+}
+.lblLabelVtBottomUp
+{
+    bottom: 0;
+}
+.lblLabelV
+{
+    top: 0;
+}
+.lblLabelH
+{
+    left: 0;
+}
+
+.lblValueVtTopDown
+{
+    bottom: 0;
+}
+.lblValueVtBottomUp
+{
+    top: 0;
+}
+.lblValueV
+{
+    bottom: 0;
+}
+.lblValueH
+{
+    right: 0;
+}
+
+.lblValueSticky
+{
+    pointer-events: none;
+
+    justify-content: center;
+
+    z-index: 6;
+
+    /* flex-grow: 0; */
+}
+.lblValueStickyHz
+{
+    height: 100%;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+.lblValueStickyVt
+{
+    width: 100%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.lblValueStickyInvis
+{
+    position: absolute;
+    visibility: hidden;
+}
+.lblValueStickyInvisHz
+{
+    right: 0;
+}
+.lblValueStickyInvisVtBu
+{
+    top: 0;
+}
+.lblValueStickyInvisVtTd
+{
+    bottom: 0;
+}
+
+.lblValueStickyInActive
+{
+    position: absolute;
+}
+.lblValueStickyInActiveHz
+{
+    left: 0;
+}
+.lblValueStickyInActiveVtTd
+{
+    top: 0;
+}
+.lblValueStickyInActiveVtBu
+{
+    bottom: 0;
+}

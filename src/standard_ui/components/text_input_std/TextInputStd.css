@@ -1,0 +1,14 @@
+.textInputStandard > textarea
+{
+    resize: none;
+}
+
+.textInputStandard > input:focus, .textInputStandard > textarea
+{
+    outline: none
+}
+
+.textInputStandard > input
+{
+    min-width: 0
+}
