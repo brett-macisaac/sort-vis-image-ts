@@ -16,7 +16,7 @@ type SortActionType = "SW" | "ST" | "C";
 class SortAction
 {
     // The type of action (should be a value of SortAction.Type)
-    #fType : SortActionType;
+    fType : SortActionType;
 
     /*
     * if #fType is either Type.Swap or Type.Compare
@@ -24,13 +24,13 @@ class SortAction
       else if #fType is Type.Set
         - The index at which to store the given value (#fValueB).
     */
-    #fValueA : number;
+    fValueA : number;
 
     /*
     * if #fType is either Type.Swap or Type.Compare
         - The index to swap/compare to the other index (#fValueA).
     */
-    #fValueB : number;
+    fValueB : number;
 
     /*
     * if #fType is either Type.Swap or Type.Compare
@@ -38,34 +38,34 @@ class SortAction
       else if #fType is Type.Set
         - The colour at which to set at the corresponding index.
     */
-    #fValueC : string;
+    fValueC : string;
 
     /*
     * The comparison operator to use (if #fType Type.Compare).
     */
-    #fCompOp : CompOp;
+    fCompOp : CompOp;
 
     constructor(pType : SortActionType, pValueA : number, pValueB : number, pValueC : string = "", pCompOp : CompOp = "E")
     {
-        this.#fType = pType;
-        this.#fValueA = pValueA;
-        this.#fValueB = pValueB;
-        this.#fValueC = pValueC;
-        this.#fCompOp = pCompOp;
+        this.fType = pType;
+        this.fValueA = pValueA;
+        this.fValueB = pValueB;
+        this.fValueC = pValueC;
+        this.fCompOp = pCompOp;
     }
 
-    get type() { return this.#fType; }
+    get type() { return this.fType; }
 
-    get valueA() { return this.#fValueA; }
-    set valueA(pValueA) { this.#fValueA = pValueA; }
+    get valueA() { return this.fValueA; }
+    set valueA(pValueA) { this.fValueA = pValueA; }
 
-    get valueB() { return this.#fValueB; }
-    set valueB(pValueB) { this.#fValueB = pValueB; }
+    get valueB() { return this.fValueB; }
+    set valueB(pValueB) { this.fValueB = pValueB; }
 
-    get valueC() { return this.#fValueC; }
-    set valueC(pValueC) { this.#fValueC = pValueC; }
+    get valueC() { return this.fValueC; }
+    set valueC(pValueC) { this.fValueC = pValueC; }
 
-    get compOp() { return this.#fCompOp; }
+    get compOp() { return this.fCompOp; }
 }
 
 export default SortAction;
